@@ -1,0 +1,18 @@
+<table class="table table-bordered table-hover">
+<thead>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Number of Pages</th>
+    <th>Published Date</th>
+    <th></th>
+</thead>
+<tbody>
+  <tr (click)="fillData(item)" *ngFor="let item of service.books">
+      <td>{{  item.title }}</td>
+      <td>{{  item.author }}</td>
+      <td>{{  item.numberOfPages }}</td>
+      <td>{{  item.publishedAt }}</td>
+      <td (click)="delete(item.id)"><span class="btn btn-danger">Delete</span></td>
+    </tr>
+</tbody>
+</table>
